@@ -33,4 +33,18 @@ user_input = st.text_input("Skriv din besked her:")
 if user_input:
     response = chatbot.get_response(user_input)
     st.write(f"**Chatbot:** {response}")
+
+# Login-knap
+if st.button("Login"):
+    st.write("Velkommen til login-siden!")
+    # Simuler en login-formular
+    email = st.text_input("Indtast din e-mail:")
+    password = st.text_input("Indtast dit kodeord:", type="password")
     
+    if st.button("Bekræft login"):
+        if email == "test@example.com" and password == "1234":
+            st.success("Login lykkedes!")
+        else:
+            st.error("Forkert e-mail eller kodeord.")
+            
+
